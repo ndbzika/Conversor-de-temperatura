@@ -15,12 +15,15 @@ let jaExiste = 0;
 tempCelsius.addEventListener("keyup", () => {
   let valorNan = document.createElement("p");
   valorNan.textContent = "Insira um valor válido";
+  valorNan.classList.add("nan");
 
   let campoKel = document.createElement("span");
   campoKel.textContent = Kelvin(Number(tempCelsius.value));
+  campoKel.classList.add("kelvin");
 
   let campoFah = document.createElement("span");
   campoFah.textContent = Fahrenheit(Number(tempCelsius.value));
+  campoFah.classList.add("fahrenheit");
 
   if (isNaN(campoFah.textContent) & isNaN(campoKel.textContent)) {
     campoFah.textContent = "-";
